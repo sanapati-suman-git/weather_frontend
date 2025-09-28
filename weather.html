@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather app</title>
+  <style>
+  body{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("image.png");
+    background-size: cover;
+    background-position:center;
+  }
+  #heading{
+     color:rgb(0, 0, 0);
+     padding:3px 9px;
+     padding-left:50px;
+  }
+  button{
+    background-color:rgb(16, 13, 177);
+    border-radius:45px;
+    border:none;
+    padding:8px;
+    font-family:Bold;
+    color:white;
+    
+  }
+  #location{
+    padding:8px;
+    font-family:'Times New Roman', Times, serif;
+    border-radius:3px;
+    border:none;
+    background-color: rgb(233, 233, 227);
+    border-style: hidden;
+    
+  }
+  button:active{
+    background-color:rgb(18, 17, 17);
+    color:white;
+  }
+  #location:active{
+    border-color: black;
+   
+  }
+  #block{
+    backdrop-filter: blur(20px);
+    border-radius:50px;
+    padding:50px;
+  }
+  .hidden{
+    display:none;
+  }
+  #weather_of_the_locaion{
+    color:rgb(23, 7, 7);
+    padding:5px;
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+    <div id="block">
+      
+    <div id="heading">
+      <h3>Weather Forcast</h3>
+    </div>
+    <div>
+      <input type="text" placeholder="Enter the Location" id="location">
+      <button id="search">Search</button>
+    </div>
+    <div id="weather_of_the_locaion" class="hidden">
+      <h2 id="city_name"></h2>
+      <p id="temperature"></p>
+      <p id="description"></p>
+    </div>
+    <p id="error-message" class="hidden">City not found.Please try again.</p>
+    </div>
+
+
+    <script src="weather.js"></script>
+
+
+
+</body>
+</html>
